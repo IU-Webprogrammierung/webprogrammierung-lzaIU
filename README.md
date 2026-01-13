@@ -1,2 +1,1 @@
-# webprogrammierung-lzaIU
-webprogrammierung-lzaIU created by GitHub Classroom
+Projekt: Web-Programmierung
