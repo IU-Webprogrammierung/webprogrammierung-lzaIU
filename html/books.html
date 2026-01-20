@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/books.css">
+        <title>Bücher</title>
+    </head>
+    <body>
+        <header class="navBarContainer">
+            <div class="logo">
+                <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="Logo/Favicon">
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="aboutMe.html">Über mich</a></li>
+                    <li><a href="travel.html">Reisen</a></li>
+                    <li><a href="books.html">Bücher</a></li>
+                    <li><a href="work.html">Arbeit</a></li>
+                </ul>
+            </div>
+        </header>
 
-</body>
+        <main>
+            <section>
+                <h1>Bücher</h1>
+                <div class="textContainer">
+                    <p>
+                        Ich habe schon früh angefangen zu lesen. Seither ist es eines meiner grössten
+                        Hobbys.
+                        <br><br>
+                        Meine liebsten Genres sind Fantasy, Romanzen und Abendteuer.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Meine Bücherliste</h2>
+
+                <div class="bookGallery">
+                    <article class="book">
+                        <img src="/images/books/" alt="Das Buch">
+                        <p>Status: XX</p>
+                    </article>
+                </div>
+                <div class="bookGallery">
+                    <article class="book">
+                        <img src="/images/books/" alt="Das Buch">
+                        <p>Status: XX</p>
+                    </article>
+                </div>
+                <div class="bookGallery">
+                    <article class="book">
+                        <img src="/images/books/" alt="Das Buch">
+                        <p>Status: XX</p>
+                    </article>
+                </div>
+                <div class="bookGallery">
+                    <article class="book">
+                        <img src="/images/books/" alt="Das Buch">
+                        <p>Status: XX</p>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>Was sind eure Lieblingsgenres?</h2>
+
+                <div class="inputContainer">
+                    <form action="">
+                        <label for="genre">Genre:</label>
+                        <input type="text" id="genre" name="genre">
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+
+                        <input type="submit" value="Senden">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footerContainer">
+            <p>Autor: Laura Zaugg</p>
+        </footer>
+    </body>
 </html>
