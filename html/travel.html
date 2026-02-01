@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/travel.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Reisen</title>
     </head>
     <body>
@@ -11,10 +12,11 @@
             <div class="logo">
                 <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="Logo/Favicon">
             </div>
-            <div class="navBar">
+            <div class="navBar" aria-label="Hauptnavigation">
                 <ul>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="aboutMe.html">Über mich</a></li>
-                    <li><a href="travel.html">Reisen</a></li>
+                    <li><a href="travel.html" aria-current="page">Reisen</a></li>
                     <li><a href="books.html">Bücher</a></li>
                     <li><a href="work.html">Arbeit</a></li>
                 </ul>
@@ -51,32 +53,32 @@
 
                 <div class="beenThereSection">
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
                     <article class="beenThere">
-                        <img src="/images/travel/" alt="Bild">
+                        <img src="/images/travel/" alt="Bild folgt">
                         <h3>Ort, Land</h3>
                         <p>Beschreibung</p>
                     </article>
@@ -85,7 +87,17 @@
         </main>
 
         <footer class="footerContainer">
-            <p>Autor: Laura Zaugg</p>
+            <div class="footerAuthor">
+                <p>Autor: Laura Zaugg</p>
+            </div>
+            <div class="footerSocialMedia">
+                <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-instagram" aria-hidden="true" role="img"></i>
+                </a>
+                <a class="socialMediaLinkedIn" href="https://www.linkedin.com/in/laura-zaugg-170655234/" target="_blank" aria-label="LinkedIn Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-linkedin" aria-hidden="true" role="img"></i>
+                </a>
+            </div>
         </footer>
     </body>
 </html>

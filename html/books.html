@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/books.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Bücher</title>
     </head>
     <body>
@@ -11,11 +12,12 @@
             <div class="logo">
                 <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="Logo/Favicon">
             </div>
-            <div class="navBar">
+            <div class="navBar" aria-label="Hauptnavigation">
                 <ul>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="aboutMe.html">Über mich</a></li>
                     <li><a href="travel.html">Reisen</a></li>
-                    <li><a href="books.html">Bücher</a></li>
+                    <li><a href="books.html" aria-current="page">Bücher</a></li>
                     <li><a href="work.html">Arbeit</a></li>
                 </ul>
             </div>
@@ -28,14 +30,15 @@
                     <p>
                         Ich habe schon früh angefangen zu lesen. Seither ist es eines meiner grössten
                         Hobbys.
-                        <br><br>
+                    </p>
+                    <p>
                         Meine liebsten Genres sind Fantasy, Romanzen und Abendteuer.
                     </p>
                 </div>
             </section>
 
             <section>
-                <h2>Meine Bücherliste</h2>
+                <h2 id="booklistHeading">Meine Bücherliste</h2>
 
                 <div class="bookGallery">
                     <article class="book">
@@ -69,7 +72,7 @@
                 <div class="inputContainer">
                     <form action="">
                         <label for="genre">Genre:</label>
-                        <input type="text" id="genre" name="genre">
+                        <input type="text" id="genre" name="genre" required>
 
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name">
@@ -81,7 +84,17 @@
         </main>
 
         <footer class="footerContainer">
-            <p>Autor: Laura Zaugg</p>
+            <div class="footerAuthor">
+                <p>Autor: Laura Zaugg</p>
+            </div>
+            <div class="footerSocialMedia">
+                <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-instagram" aria-hidden="true" role="img"></i>
+                </a>
+                <a class="socialMediaLinkedIn" href="https://www.linkedin.com/in/laura-zaugg-170655234/" target="_blank" aria-label="LinkedIn Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-linkedin" aria-hidden="true" role="img"></i>
+                </a>
+            </div>
         </footer>
     </body>
 </html>

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/work.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Arbeit</title>
     </head>
     <body>
@@ -11,18 +12,19 @@
             <div class="logo">
                 <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="Logo/Favicon">
             </div>
-            <div class="navBar">
+            <div class="navBar" aria-label="Hauptnavigation">
                 <ul>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="aboutMe.html">Über mich</a></li>
                     <li><a href="travel.html">Reisen</a></li>
                     <li><a href="books.html">Bücher</a></li>
-                    <li><a href="work.html">Arbeit</a></li>
+                    <li><a href="work.html" aria-current="page">Arbeit</a></li>
                 </ul>
             </div>
         </header>
 
         <main>
-            <section>
+            <section class="textContainer">
                 <h1>Arbeit</h1>
                 <p>
                     Hier mein Lebenslauf mit meinen wichtigsten Abschnitten.
@@ -30,8 +32,8 @@
             </section>
 
             <div class="resume">
-                <section class="shortResume">
-                    <h2>Kurzprofil</h2>
+                <section class="shortResume" aria-labelledby="profileHeading">
+                    <h2 id="profileHeading">Kurzprofil</h2>
                     <p>
                         Stellvertretende bereichsleiterin Informatik, Applikationsmanagerin
                         und Datenspezialistin im ManagedCare Bereich.
@@ -43,7 +45,7 @@
                     <article>
                         <h3>Mitarbeiterin Informatik</h3>
                         <p>iNOCARE AG</p>
-                        <p>2021 - heute</p>
+                        <time datetime="2021">2021</time> - <time datetime="heute">heute</time>
                         <p>
                             Als Praktikantin angefangen, habe ich mich weitergebildet zur Datenverarbeitung und
                             mittlerweile bin ich Stellvertretende Bereichleiterin in dem Bereich Informatik und Digitalisierung.
@@ -52,7 +54,7 @@
                     <article>
                         <h3>Kaufmännische Angestellte</h3>
                         <p>Verein Region Oberaargau</p>
-                        <p>2020 - 2021</p>
+                        <time datetime="2020">2020</time> - <time datetime="2021">2021</time>
                         <p>
                             Führung Buchhaltung, Korrespondenz und Veranstaltungsplanung
                         </p>
@@ -60,7 +62,7 @@
                     <article>
                         <h3>Auszubildende</h3>
                         <p>DER Touristik Suisse AG, Kuoni Langenthal</p>
-                        <p>2017 - 2020</p>
+                        <time datetime="2017">2017</time> - <time datetime="2020">2020</time>
                         <p>
                             Meine Lehre bei Kuoni Langenthal
                         </p>
@@ -72,17 +74,17 @@
                     <article>
                         <h3>B. Sc. Informatik</h3>
                         <p>IU Internationale Hochschule</p>
-                        <p>2021 - heute</p>
+                        <time datetime="2021">2021</time> - <time datetime="heute">heute</time>
                     </article>
                     <article>
                         <h3>EFZ Kauffrau inklusive Berufsmaturität</h3>
                         <p>DER Touristik Suisse AG, Kuoni Langenthal</p>
-                        <p>2017 - 2020</p>
+                        <time datetime="2017">2017</time> - <time datetime="2020">2020</time>
                     </article>
                     <article>
                         <h3>Schule</h3>
                         <p>Primarschule, Oberstufe und Didac Bern</p>
-                        <p>2007 - 2017</p>
+                        <time datetime="2007">2007</time> - <time datetime="2017">2017</time>
                     </article>
                 </section>
 
@@ -104,7 +106,17 @@
         </main>
 
         <footer class="footerContainer">
-            <p>Autor: Laura Zaugg</p>
+            <div class="footerAuthor">
+                <p>Autor: Laura Zaugg</p>
+            </div>
+            <div class="footerSocialMedia">
+                <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-instagram" aria-hidden="true" role="img"></i>
+                </a>
+                <a class="socialMediaLinkedIn" href="https://www.linkedin.com/in/laura-zaugg-170655234/" target="_blank" aria-label="LinkedIn Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-linkedin" aria-hidden="true" role="img"></i>
+                </a>
+            </div>
         </footer>
     </body>
 </html>
