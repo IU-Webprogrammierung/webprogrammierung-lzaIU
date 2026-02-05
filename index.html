@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Landing Page</title>
+    </head>
+    <body>
+        <header class="navBarContainer">
+            <div class="logo">
+                <img id="logoNavBar" src="images/landingPage/favicon.png" alt="Logo/Favicon">
+            </div>
+            <div class="navBar" aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="/index.html" aria-current="page">Home</a></li>
+                    <li><a href="html/aboutMe.html">Über mich</a></li>
+                    <li><a href="html/travel.html">Reisen</a></li>
+                    <li><a href="html/books.html">Bücher</a></li>
+                    <li><a href="html/work.html">Arbeit</a></li>
+                </ul>
+            </div>
+        </header>
 
-</body>
+        <main>
+            <div class="previewContainer" id="aboutMe">
+                <h1>Über mich</h1>
+                <div class="previewText" id="aboutMeText">
+                    <p>
+                        Mein Name ist Laura und ich bin 26 Jahre alt. Ich wohne mit meinem
+                        Partner in Selzach im Kanton Solothurn in deer Schweiz.
+                        <a href="html/aboutMe.html">Hier erfährst du mehr über mich</a>
+                    </p>
+                </div>
+                <div class="previewImage" id="aboutMeImage">
+                    <img src="images/landingPage/me.jpg" alt="Das bin ich, Laura Zaugg">
+                </div>
+            </div>
+
+            <div class="previewContainer" id="travel">
+                <h1>Reisen</h1>
+                <div class="previewText" id="travelText">
+                    <p>
+                        Eines meiner liebsten Dinge ist das Reisen, durch meine Ausbildung
+                        in einem Reisebüro konnte ich mir viel Wissen aneignen.
+                        <a href="html/travel.html">Erfahre mehr über meine Reisen</a>
+                    </p>
+                </div>
+                <div class="previewImage" id="travelImage">
+                    <img src="images/landingPage/travel.jpg" alt="Reisebild Split, Kroatien">
+                </div>
+            </div>
+
+            <div class="previewContainer" id="books">
+                <h1>Bücher</h1>
+                <div class="previewText" id="booksText">
+                    <p>
+                        Neben dem Reisen lese ich leidenschaftlich gerne. Mein Ziel für dieses
+                        Jahr sind 155 Bücher, das wären fünf mehr als im 2025.
+                        <a href="html/books.html">Mehr zu meiner Lesebegeisterung</a>
+                    </p>
+                </div>
+                <div class="previewImage" id="booksImage">
+                    <img src="images/landingPage/ereader.jpg" alt="Bild lesende Frau von pixabay">
+                </div>
+            </div>
+
+            <div class="previewContainer" id="work">
+                <h1>Arbeit</h1>
+                <div class="previewText" id="workText">
+                    <p>
+                        Ein grosser Teil meiner Zeit verbringe ich auf der Arbeit,
+                        daher ist dies auch ein wichtiger Teil meines Lebens.
+                        <a href="html/work.html">Hier findest du meinen Lebenslauf.</a>
+                    </p>
+                </div>
+                <div class="previewImage" id="workImage">
+                    <img src="images/landingPage/work.jpg" alt="Abgekürztes iNOCARE AG Logo">
+                </div>
+            </div>
+        </main>
+
+        <footer class="footerContainer">
+            <div class="footerAuthor">
+                <p>Autor: Laura Zaugg</p>
+            </div>
+            <div class="footerSocialMedia">
+                <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-instagram" aria-hidden="true" role="img"></i>
+                </a>
+                <a class="socialMediaLinkedIn" href="https://www.linkedin.com/in/laura-zaugg-170655234/" target="_blank" aria-label="LinkedIn Profil (öffnet in neuem Tab)">
+                    <i class="fa fa-linkedin" aria-hidden="true" role="img"></i>
+                </a>
+            </div>
+        </footer>
+    </body>
 </html>
