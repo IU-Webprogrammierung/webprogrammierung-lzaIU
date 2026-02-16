@@ -1,10 +1,14 @@
-class webComponentHeader extends HTMLElement {
+class WebComponentHeader extends HTMLElement {
     static get observedAttributes() {
         return [];
     }
     constructor() {
         super();
         this.attachShadow({mode: 'open'});
+    }
+
+    connectedCallback() {
+        this.render();
     }
 
     render() {
@@ -29,4 +33,4 @@ class webComponentHeader extends HTMLElement {
             `
     }
 }
-customElements.define('web-component-header', webComponentHeader);
+customElements.define('web-component-header', WebComponentHeader);
