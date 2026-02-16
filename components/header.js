@@ -30,8 +30,3 @@ class webComponentHeader extends HTMLElement {
     }
 }
 customElements.define('web-component-header', webComponentHeader);
-
-
-
-
-
