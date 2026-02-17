@@ -1,0 +1,21 @@
+/* Grundstylings */
+
+
+
+
+/* < 900px */
+
+
+
+
+
+/* 900px - 1599px */
+@media screen and (min-width: 900px) and (max-width: 1599px){
+
+}
+
+
+/* >= 1600px */
+@media screen and (min-width: 1600px) {
+
+}
