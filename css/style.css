@@ -1,21 +1,49 @@
+:root {
+    --primary-color: #273556;
+    --accent-color: #ab906a;
+    --background-color: #f8f9fa;
+    --heading-color: #3f4f75;
+    --text-color: #333333;
+}
+
 body {
     font-family: 'Verdana', 'Tahoma', sans-serif;
     font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
 }
 
-
+/* Text */
 h1 {
     font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
 }
-
 h2 {
     font-size: 1.5rem;
+    color: var(--heading-color);
+    font-weight: 600;
 }
-
 h3 {
     font-size: 1rem;
+    font-weight: 700;
 }
-
 p {
     font-size: 1rem;
+}
+
+/* Globale Elemente */
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--heading-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
