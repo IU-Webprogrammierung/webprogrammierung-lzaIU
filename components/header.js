@@ -36,7 +36,6 @@ class WebComponentHeader extends HTMLElement {
 
     activePage() {
         const currentPage = window.location.pathname;
-
         const links = this.shadowRoot.querySelectorAll('.navBar a');
 
         links.forEach(link => {
