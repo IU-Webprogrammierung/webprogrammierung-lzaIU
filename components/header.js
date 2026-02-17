@@ -9,6 +9,7 @@ class WebComponentHeader extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.activePage();
     }
 
     render() {
@@ -20,7 +21,7 @@ class WebComponentHeader extends HTMLElement {
                     <div class="logo">
                         <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="favicon für Webseite"/>
                     </div>
-                    <div class="navBar" aria-label="Hauptnavigation">
+                    <nav class="navBar" aria-label="Hauptnavigation">
                         <ul>
                             <li><a href="/index.html">Home</a></li>
                             <li><a href="/html/aboutMe.html">Über mich</a></li>
@@ -28,9 +29,27 @@ class WebComponentHeader extends HTMLElement {
                             <li><a href="/html/books.html">Bücher</a></li>
                             <li><a href="/html/work.html">Arbeit</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </header>
             `
     }
+
+    activePage() {
+        const currentPage = window.location.pathname;
+
+        const links = this.shadowRoot.querySelectorAll('.navBar a');
+
+        links.forEach(link => {
+                const linkPath = link.getAttribute('href');
+
+                if(currentPage === linkPath || (currentPage === '/' && linkPath === '/index.html')) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            }
+        )
+    }
+
+
 }
 customElements.define('web-component-header', WebComponentHeader);
