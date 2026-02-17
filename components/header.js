@@ -13,39 +13,46 @@ class WebComponentHeader extends HTMLElement {
     }
 
     render() {
+        // language=HTML
         this.shadowRoot.innerHTML =
             `
                 <link rel="stylesheet" href="/css/style.css">
-                <link rel="stylesheet" href="css/header.css">
-                
+                <link rel="stylesheet" href="/css/header.css">
+
                 <header class="navBarContainer">
+
                     <div class="logo">
                         <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="favicon für Webseite"/>
                     </div>
-                    <nav class="navBar" aria-label="Hauptnavigation">
-                        <ul>
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="/html/aboutMe.html">Über mich</a></li>
-                            <li><a href="/html/travel.html">Reisen</a></li>
-                            <li><a href="/html/books.html">Bücher</a></li>
-                            <li><a href="/html/work.html">Arbeit</a></li>
+
+                    <div class="navbar" aria-label="Hauptnavigation">
+                        <ul id="navSites">
+                            <li><a href="/index.html" >Home</a></li>
+                            <li><a href="/html/aboutMe.html" >Über mich</a></li>
+                            <li><a href="/html/travel.html" >Reisen</a></li>
+                            <li><a href="/html/books.html" >Bücher</a></li>
+                            <li><a href="/html/work.html" >Arbeit</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </header>
             `
     }
 
     activePage() {
-        const currentPage = window.location.pathname;
-        const links = this.shadowRoot.querySelectorAll('.navBar a');
+        const currentPage = window.location.pathname.replace('.html', '');
+        const links = this.shadowRoot.querySelectorAll('.navbar a');
 
         links.forEach(link => {
-                const linkPath = link.getAttribute('href');
+                const linkPath = link.getAttribute('href').replace('.html', '');
 
-                if(currentPage === linkPath || (currentPage === '/' && linkPath === '/index.html')) {
+                if(currentPage === linkPath ||
+                    (currentPage === '/' && linkPath === '/index') ||
+                        currentPage.endsWith(linkPath) && linkPath !== '/') {
+
                     link.classList.add('active');
                     link.setAttribute('aria-current', 'page');
                 }
+            console.log("Current:", currentPage, "LinkPath:", linkPath);
             }
         )
     }

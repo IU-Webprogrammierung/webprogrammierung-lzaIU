@@ -1,0 +1,49 @@
+/* Grundstylings */
+.navBarContainer {
+    background-color: var(--accent-color);
+    padding: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 50px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* < 900px */
+
+
+
+/* > 900px */
+@media screen and (min-width: 900px) {
+    .navbar a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: 0.2s ease;
+    }
+    .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar ul li a {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+    .navbar a:hover {
+        color: var(--accent-color);
+        background-color: var(--primary-color);
+    }
+    .navbar a.active {
+        background-color: var(--primary-color);
+        color: var(--accent-color);
+    }
+}
