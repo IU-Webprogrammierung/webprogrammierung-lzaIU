@@ -15,6 +15,7 @@ class WebComponentHeader extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML =
             `
+                <link rel="stylesheet" href="/css/style.css">
                 <link rel="stylesheet" href="css/header.css">
                 
                 <header class="navBarContainer">
