@@ -1,5 +1,6 @@
 /* Grundstylings */
 .navBarContainer {
+    position: relative;
     background-color: var(--accent-color);
     padding: 0.25rem;
     display: flex;
@@ -13,14 +14,45 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* < 900px */
-
+.burger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    color: var(--primary-color);
+    padding-right: 1rem;
+}
+.navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: var(--accent-color);
+}
+.navbar.responsive {
+    display: block;
+}
+.navbar ul li a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
 
 
 /* > 900px */
 @media screen and (min-width: 900px) {
+    .navbar {
+        display: flex;
+        position: static;
+        width: auto;
+    }
     .navbar a {
         display: inline-block;
         text-decoration: none;
@@ -30,6 +62,7 @@
     }
     .navbar ul {
         display: flex;
+        flex-direction: row;
         justify-content: flex-end;
     }
     .navbar ul li a {
@@ -45,5 +78,8 @@
     .navbar a.active {
         background-color: var(--primary-color);
         color: var(--accent-color);
+    }
+    .burger {
+        display: none;
     }
 }
