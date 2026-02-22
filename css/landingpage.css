@@ -72,7 +72,7 @@ main {
     }
     .previewText {
         grid-row: 3;
-        align-content: start;
+        align-self: start;
     }
     .previewText p {
         font-size: 2vw;
@@ -85,5 +85,38 @@ main {
 
 /* >= 1600px */
 @media screen and (min-width: 1600px) {
-
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: stretch;
+    }
+    .previewContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .previewImage {
+        order: 1;
+        align-content: start;
+    }
+    .previewImage img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+    .previewContainer h1 {
+        font-size: 3.5vw;
+        align-self: start;
+    }
+    .previewText {
+        align-content: start;
+        flex-grow: 1;
+    }
+    .previewText p {
+        font-size: 1.5vw;
+        align-self: start;
+    }
+    .previewText a {
+        font-size: 1.2vw;
+        align-self: start;
+    }
 }
