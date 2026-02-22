@@ -47,10 +47,39 @@ main {
 }
 
 
-
 /* 900px - 1599px */
 @media screen and (min-width: 900px) and (max-width: 1599px){
-
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .previewContainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .previewImage {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .previewImage img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+    .previewContainer h1 {
+        grid-row: 2;
+        font-size: 5vw;
+    }
+    .previewText {
+        grid-row: 3;
+        align-content: start;
+    }
+    .previewText p {
+        font-size: 2vw;
+    }
+    .previewText a {
+        font-size: 1.5vw;
+    }
 }
 
 
