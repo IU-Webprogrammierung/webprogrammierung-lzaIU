@@ -21,7 +21,6 @@ section:nth-of-type(2) {
 .tableAboutMe {
     order: 3;
 }
-
 .imageContainer img {
     width: 100%;
     height: auto;
@@ -45,7 +44,30 @@ section:nth-of-type(2) {
 
 /* 900px - 1599px */
 @media screen and (min-width: 900px) and (max-width: 1599px){
-
+    section:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    .imageContainer {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .imageContainer img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        display: block;
+    }
+    .textContainer {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .tableAboutMe {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
 }
 
 
