@@ -1,12 +1,46 @@
 /* Grundstylings */
-
-
-
+main {
+    padding: 2rem;
+}
+section:first-of-type {
+    margin-bottom: 2rem;
+}
+section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 /* < 900px */
+.textContainer {
+    order: 1;
+}
+.imageContainer {
+    order: 2;
+}
+.tableAboutMe {
+    order: 3;
+}
 
-
-
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    border-spacing: 0.5rem;
+}
+.tableAboutMe {
+    border: 2px solid var(--accent-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.tableAboutMe table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableAboutMe th, td {
+    padding: 0.7rem;
+}
 
 
 /* 900px - 1599px */
