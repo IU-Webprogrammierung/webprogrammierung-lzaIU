@@ -70,8 +70,43 @@ section:nth-of-type(2) {
     }
 }
 
-
 /* >= 1600px */
 @media screen and (min-width: 1600px) {
-
+    section:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .textContainer {
+        order: 2;
+        margin: auto;
+    }
+    .imageContainer {
+        order: 1;
+    }
+    .tableAboutMe {
+        order: 3;
+    }
+    .imageContainer img {
+        width: 40%;
+        height: auto;
+        display: block;
+        border-radius: 1rem;
+        border-spacing: 0.5rem;
+        margin: auto;
+    }
+    .tableAboutMe {
+        border: 2px solid var(--accent-color);
+        border-radius: 1rem;
+        overflow: hidden;
+        margin: auto;
+        width: 60%;
+    }
+    .tableAboutMe table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .tableAboutMe th, td {
+        padding: 0.7rem;
+    }
 }
