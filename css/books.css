@@ -1,12 +1,61 @@
 /* Grundstylings */
-
-
-
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 /* < 900px */
-
-
-
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+.bookGallery {
+    display: flex;
+    justify-content: center;
+}
+.book {
+    gap: 0.5rem;
+}
+.book img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+.inputContainer form {
+    display: flex;
+    gap: 1rem;
+}
+input[type="text"] {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 2.5vw;
+}
+.inputContainer input[type="text"],
+.inputContainer input[type="submit"] {
+    width: 80%;
+    box-sizing: border-box;
+}
+input:focus {
+    outline: none;
+    border: 3px solid var(--accent-color);
+}
 
 
 /* 900px - 1599px */
