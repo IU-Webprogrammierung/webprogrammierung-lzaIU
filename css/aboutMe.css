@@ -15,6 +15,9 @@ section:nth-of-type(2) {
 .textContainer {
     order: 1;
 }
+.textContainer p {
+    font-size: calc(12px + .5vw);
+}
 .imageContainer {
     order: 2;
 }
