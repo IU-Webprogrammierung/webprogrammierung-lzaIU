@@ -9,6 +9,13 @@ section {
     margin-bottom: 1rem;
 }
 
+section h2 {
+    font-size: calc(15px + .5vw);
+}
+section p {
+    font-size: calc(12px + .5vw);
+}
+
 /* < 900px */
 .travelKeys {
     display: flex;
@@ -47,6 +54,13 @@ section {
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
 }
+.beenThere h3 {
+    color: var(--primary-color);
+    font-size: calc(15px + .5vw);
+}
+.beenThere p {
+    font-size: calc(12px + .5vw);
+}
 
 
 /* 900px - 1599px */
@@ -83,8 +97,20 @@ section {
     }
 }
 
-
 /* >= 1600px */
 @media screen and (min-width: 1600px) {
+    .travelKeys {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .travelKey {
+        width: 100%;
+    }
 
+    .beenThereSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
 }
