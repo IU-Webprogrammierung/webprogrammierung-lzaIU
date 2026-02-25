@@ -5,6 +5,21 @@ main {
 p {
     font-size: calc(12px + .5vw);
 }
+main h2 {
+    font-size: calc(15px + .5vw);
+}
+main h3 {
+    font-size: calc(12px + .5vw);
+}
+main p {
+    font-size: calc(12px + .5vw);
+}
+main time {
+    font-size: calc(10px + .5vw);
+}
+.skills li {
+    font-size: calc(12px + .5vw);
+}
 
 /* < 1200px */
 .textContainer {
@@ -31,9 +46,6 @@ p {
 .resume section {
     display: contents;
 }
-.experience h2 {
-    font-size: calc(15px + .5vw);
-}
 .resume ul {
     padding-left: 1rem;
     margin: 0;
@@ -42,7 +54,24 @@ p {
 
 /* >= 1200px */
 @media screen and (min-width: 1200px) {
-
+    .resume {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .resume section {
+        display: block;
+        padding: 1rem 0;
+    }
+    .resume > section > h2 {
+        grid-column: auto;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .resume > section > *:not(h2) {
+        grid-column: auto;
+    }
 }
 
 
