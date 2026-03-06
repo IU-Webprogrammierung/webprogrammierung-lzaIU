@@ -23,7 +23,7 @@ main time {
 
 /* < 1200px */
 .textContainer {
-    margin-bottom: 2rem;
+    gap: 2rem;
 }
 .textContainer p {
     font-size: calc(12px + .5vw);
@@ -67,7 +67,7 @@ main time {
         grid-column: auto;
         border-bottom: 2px solid var(--accent-color);
         padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        gap: 1rem;
     }
     .resume > section > *:not(h2) {
         grid-column: auto;
