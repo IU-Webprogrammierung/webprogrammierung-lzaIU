@@ -1,0 +1,116 @@
+/* Grundstylings */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section {
+    gap: 1rem;
+}
+
+section h2 {
+    font-size: calc(15px + .5vw);
+}
+section p {
+    font-size: calc(12px + .5vw);
+}
+
+/* < 900px */
+.travelKeys {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.travelKey {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent-color);
+    text-align: center;
+}
+.travelKey h3 {
+    color: var(--primary-color);
+    font-size: calc(15px + .5vw);
+}
+.travelKey p {
+    font-size: calc(12px + .5vw);
+}
+
+.beenThereSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.beenThere {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent-color);
+}
+.beenThere img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+}
+.beenThere h3 {
+    color: var(--primary-color);
+    font-size: calc(15px + .5vw);
+}
+.beenThere p {
+    font-size: calc(12px + .5vw);
+}
+
+
+/* 900px - 1599px */
+@media screen and (min-width: 900px) and (max-width: 1599px){
+    .travelKeys {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+    .travelKey:nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center;
+        max-width: 300px;
+        width: 100%;
+    }
+    .travelKey {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .beenThereSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .beenThere {
+        margin: 0;
+    }
+    .beenThere img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+/* >= 1600px */
+@media screen and (min-width: 1600px) {
+    .travelKeys {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .travelKey {
+        width: 100%;
+    }
+
+    .beenThereSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}

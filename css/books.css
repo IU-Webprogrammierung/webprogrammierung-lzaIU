@@ -1,0 +1,139 @@
+/* Grundstylings */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.textContainer p {
+    font-size: calc(12px + .5vw);
+}
+input[type="text"] {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 2.5vw;
+}
+input:focus {
+    outline: none;
+    border: 3px solid var(--accent-color);
+}
+.inputContainer input[type="submit"] {
+    width: 40%;
+}
+.inputContainer label {
+    font-size: calc(12px + .5vw);
+}
+
+/* < 900px */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+.bookGallery {
+    display: flex;
+    justify-content: center;
+}
+.book {
+    gap: 0.5rem;
+}
+.book img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+.inputContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inputContainer input[type="text"] {
+    height: 4rem;
+    box-sizing: border-box;
+}
+
+
+
+/* 900px - 1599px */
+@media screen and (min-width: 900px) and (max-width: 1599px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+    main section:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    main section:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    main section:nth-of-type(3) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    #booklistHeading {
+        grid-column: 1 / 3;
+    }
+    .bookGallery {
+        width: 100%;
+    }
+    .book img {
+        width: 75%;
+        height: auto;
+        display: block;
+    }
+}
+
+
+/* >= 1600px */
+@media screen and (min-width: 1600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+        align-items: start;
+    }
+    main section:nth-of-type(1) {
+        grid-column: 1;
+    }
+    main section:nth-of-type(2) {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        align-content: start;
+    }
+    #booklistHeading {
+        grid-column: 1 / 3;
+    }
+    main section:nth-of-type(3) {
+        grid-column: 3;
+    }
+    .book img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+}

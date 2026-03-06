@@ -1,0 +1,115 @@
+/* Grundstylings */
+main {
+    padding: 2rem;
+}
+section:first-of-type {
+    gap: 2rem;
+}
+section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* < 900px */
+.textContainer {
+    order: 1;
+}
+.textContainer p {
+    font-size: calc(12px + .5vw);
+}
+.imageContainer {
+    order: 2;
+}
+.tableAboutMe {
+    order: 3;
+}
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    border-spacing: 0.5rem;
+}
+.tableAboutMe {
+    border: 2px solid var(--accent-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.tableAboutMe table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableAboutMe th, td {
+    padding: 0.7rem;
+}
+
+
+/* 900px - 1599px */
+@media screen and (min-width: 900px) and (max-width: 1599px){
+    section:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    .imageContainer {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .imageContainer img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        display: block;
+    }
+    .textContainer {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .tableAboutMe {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}
+
+/* >= 1600px */
+@media screen and (min-width: 1600px) {
+    section:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .textContainer {
+        order: 2;
+        margin: auto;
+    }
+    .imageContainer {
+        order: 1;
+    }
+    .tableAboutMe {
+        order: 3;
+    }
+    .imageContainer img {
+        width: 40%;
+        height: auto;
+        display: block;
+        border-radius: 1rem;
+        border-spacing: 0.5rem;
+        margin: auto;
+    }
+    .tableAboutMe {
+        border: 2px solid var(--accent-color);
+        border-radius: 1rem;
+        overflow: hidden;
+        margin: auto;
+        width: 60%;
+    }
+    .tableAboutMe table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .tableAboutMe th, td {
+        padding: 0.7rem;
+    }
+}

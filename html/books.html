@@ -3,25 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/books.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/components/header.js" defer></script>
+        <script src="/components/footer.js" defer></script>
         <title>Bücher</title>
     </head>
     <body>
-        <header class="navBarContainer">
-            <div class="logo">
-                <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="Logo/Favicon">
-            </div>
-            <div class="navBar" aria-label="Hauptnavigation">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="aboutMe.html">Über mich</a></li>
-                    <li><a href="travel.html">Reisen</a></li>
-                    <li><a href="books.html" aria-current="page">Bücher</a></li>
-                    <li><a href="work.html">Arbeit</a></li>
-                </ul>
-            </div>
-        </header>
+
+        <web-component-header></web-component-header>
 
         <main>
             <section>
@@ -83,18 +73,6 @@
             </section>
         </main>
 
-        <footer class="footerContainer">
-            <div class="footerAuthor">
-                <p>Autor: Laura Zaugg</p>
-            </div>
-            <div class="footerSocialMedia">
-                <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" aria-label="Instagram Profil (öffnet in neuem Tab)">
-                    <i class="fa fa-instagram" aria-hidden="true" role="img"></i>
-                </a>
-                <a class="socialMediaLinkedIn" href="https://www.linkedin.com/in/laura-zaugg-170655234/" target="_blank" aria-label="LinkedIn Profil (öffnet in neuem Tab)">
-                    <i class="fa fa-linkedin" aria-hidden="true" role="img"></i>
-                </a>
-            </div>
-        </footer>
+        <web-component-footer></web-component-footer>
     </body>
 </html>

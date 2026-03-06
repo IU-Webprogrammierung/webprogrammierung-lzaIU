@@ -1,0 +1,122 @@
+/* Grundstylings */
+main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+span {
+
+}
+
+/* < 900px */
+main {
+    grid-template-columns: 1fr;
+}
+.previewContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+}
+.previewContainer h1 {
+    grid-column: 1;
+    grid-row: 1;
+    align-content: end;
+    font-size: 7vw;
+}
+.previewText {
+    grid-column: 1;
+    grid-row: 2;
+    align-content: start;
+}
+.previewText p {
+    font-size: 3vw;
+}
+.previewText a {
+    font-size: 2.5vw;
+}
+.previewImage {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    justify-self: center;
+    align-self: center;
+}
+.previewImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 900px - 1599px */
+@media screen and (min-width: 900px) and (max-width: 1599px){
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .previewContainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .previewImage {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .previewImage img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+    .previewContainer h1 {
+        grid-row: 2;
+        font-size: 5vw;
+    }
+    .previewText {
+        grid-row: 3;
+        align-self: start;
+    }
+    .previewText p {
+        font-size: 2vw;
+    }
+    .previewText a {
+        font-size: 1.5vw;
+    }
+}
+
+
+/* >= 1600px */
+@media screen and (min-width: 1600px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: stretch;
+    }
+    .previewContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .previewImage {
+        order: 1;
+        align-content: start;
+    }
+    .previewImage img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+    .previewContainer h1 {
+        font-size: 3.5vw;
+        align-self: start;
+    }
+    .previewText {
+        align-content: start;
+        flex-grow: 1;
+    }
+    .previewText p {
+        font-size: 1.5vw;
+        align-self: start;
+    }
+    .previewText a {
+        font-size: 1.2vw;
+        align-self: start;
+    }
+}
