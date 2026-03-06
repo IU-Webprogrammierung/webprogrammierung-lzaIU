@@ -14,15 +14,17 @@ class WebComponentHeader extends HTMLElement {
     }
 
     render() {
+        const ROOT = "/" + window.location.pathname.split("/")[1] + "/";
+
         this.shadowRoot.innerHTML =
             `
-                <link rel="stylesheet" href="/css/style.css">
-                <link rel="stylesheet" href="/css/header.css">
+                <link rel="stylesheet" href="${ROOT}css/style.css">
+                <link rel="stylesheet" href="${ROOT}css/header.css">
 
                 <header class="navBarContainer">
 
                     <div class="logo">
-                        <img id="logoNavBar" src="/images/landingPage/favicon.png" alt="favicon für Webseite"/>
+                        <img id="logoNavBar" src="${ROOT}images/landingPage/favicon.png" alt="favicon für Webseite"/>
                     </div>
 
                     <div class="burger" id="burger" aria-label="Navigationsmenü öffnen">
@@ -45,11 +47,11 @@ class WebComponentHeader extends HTMLElement {
                     
                     <div class="navbar" id="navbar" aria-label="Hauptnavigation">
                         <ul id="navSites">
-                            <li><a href="/index.html" >Home</a></li>
-                            <li><a href="/html/aboutMe.html" >Über mich</a></li>
-                            <li><a href="/html/travel.html" >Reisen</a></li>
-                            <li><a href="/html/books.html" >Bücher</a></li>
-                            <li><a href="/html/work.html" >Arbeit</a></li>
+                            <li><a href="${ROOT}index.html" >Home</a></li>
+                            <li><a href="${ROOT}html/aboutMe.html" >Über mich</a></li>
+                            <li><a href="${ROOT}html/travel.html" >Reisen</a></li>
+                            <li><a href="${ROOT}html/books.html" >Bücher</a></li>
+                            <li><a href="${ROOT}html/work.html" >Arbeit</a></li>
                         </ul>
                     </div>
                 </header>
