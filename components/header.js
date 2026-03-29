@@ -27,7 +27,7 @@ class WebComponentHeader extends HTMLElement {
                         <img id="logoNavBar" src="${ROOT}images/landingPage/favicon.png" alt="favicon für Webseite"/>
                     </div>
 
-                    <div class="burger" id="burger" aria-label="Navigationsmenü öffnen">
+                    <button class="burger" id="burger" aria-label="Navigationsmenü öffnen" aria-expanded="false">
                         <svg viewBox="0 0 640 640" width="32" height="32">
                             <path
                                 d="M112 448C103.2 448 96 455.2 96 464C96 508.2 131.8 544 176 544L464 544C508.2 544 544 508.2 544 464C544 455.2 536.8 448 528 448L112 448z
@@ -43,7 +43,7 @@ class WebComponentHeader extends HTMLElement {
                                     stroke-linejoin="round"
                             />
                         </svg>
-                    </div>
+                    </button>
                     
                     <div class="navbar" id="navbar" aria-label="Hauptnavigation">
                         <ul id="navSites">
@@ -82,7 +82,8 @@ class WebComponentHeader extends HTMLElement {
         const navbar = this.shadowRoot.getElementById('navbar');
 
         burger.addEventListener('click', () => {
-            navbar.classList.toggle('responsive');
+            const isOpen = navbar.classList.toggle('responsive');
+            burger.setAttribute('aria-expanded', isOpen)
         })
     }
 

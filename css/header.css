@@ -25,6 +25,9 @@
     display: block;
     color: var(--primary-color);
     padding-right: 1rem;
+
+    background: none;
+    border: none;
 }
 .navbar {
     display: none;
