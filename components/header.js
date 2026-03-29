@@ -21,7 +21,7 @@ class WebComponentHeader extends HTMLElement {
                 <link rel="stylesheet" href="${ROOT}css/style.css">
                 <link rel="stylesheet" href="${ROOT}css/header.css">
 
-                <header class="navBarContainer">
+                <div class="navBarContainer">
 
                     <div class="logo">
                         <img id="logoNavBar" src="${ROOT}images/landingPage/favicon.png" alt="favicon für Webseite"/>
@@ -54,7 +54,7 @@ class WebComponentHeader extends HTMLElement {
                             <li><a href="${ROOT}html/work.html" >Arbeit</a></li>
                         </ul>
                     </nav>
-                </header>
+                </div>
             `
     }
 
