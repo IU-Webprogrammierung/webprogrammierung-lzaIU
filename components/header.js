@@ -4,19 +4,19 @@ class WebComponentHeader extends HTMLElement {
     }
     constructor() {
         super();
-        this.attachShadow({mode: 'open'});
+        this.attachShadow({mode: 'open'}); // Erstellt DOM
     }
 
     connectedCallback() {
-        this.render();
-        this.activePage();
-        this.burgerFunction()
+        this.render(); // HTML
+        this.activePage(); // Aktive Seite
+        this.burgerFunction() // Burger
     }
 
     render() {
-        const ROOT = "/" + window.location.pathname.split("/")[1] + "/";
+        const ROOT = "/" + window.location.pathname.split("/")[1] + "/"; // Berechnung für Root-Pfad
 
-        this.shadowRoot.innerHTML =
+        this.shadowRoot.innerHTML = // HTML
             `
                 <link rel="stylesheet" href="${ROOT}css/style.css">
                 <link rel="stylesheet" href="${ROOT}css/header.css">
@@ -58,6 +58,9 @@ class WebComponentHeader extends HTMLElement {
             `
     }
 
+    /*
+    Setzt pro Seite die korrekte aktive Seite
+     */
     activePage() {
         const currentPage = window.location.pathname.replace('.html', '');
         const links = this.shadowRoot.querySelectorAll('.navbar a');
@@ -77,6 +80,9 @@ class WebComponentHeader extends HTMLElement {
         )
     }
 
+    /*
+    Burger-Funktion
+     */
     burgerFunction() {
         const burger = this.shadowRoot.getElementById('burger');
         const navbar = this.shadowRoot.getElementById('navbar');

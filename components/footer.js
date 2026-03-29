@@ -1,10 +1,7 @@
 class WebComponentFooter extends HTMLElement {
-    static get observedAttributes() {
-        return [];
-    }
     constructor() {
         super();
-        this.attachShadow({mode: 'open'});
+        this.attachShadow({mode: 'open'}); // Erstellt DOM
     }
 
     connectedCallback() {
@@ -12,9 +9,9 @@ class WebComponentFooter extends HTMLElement {
     }
 
     render() {
-        const ROOT = "/" + window.location.pathname.split("/")[1] + "/";
+        const ROOT = "/" + window.location.pathname.split("/")[1] + "/"; // Berechnung für Root-Pfad
 
-        this.shadowRoot.innerHTML =
+        this.shadowRoot.innerHTML = // HTML
             `
                 <link rel="stylesheet" href="${ROOT}css/style.css">
                 <link rel="stylesheet" href="${ROOT}css/footer.css">
