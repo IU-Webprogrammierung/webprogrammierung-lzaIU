@@ -1,7 +1,4 @@
 class WebComponentHeader extends HTMLElement {
-    static get observedAttributes() {
-        return [];
-    }
     constructor() {
         super();
         this.attachShadow({mode: 'open'}); // Erstellt DOM
