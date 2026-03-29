@@ -102,6 +102,10 @@ Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt:
 * Wiederverwendbare Komponenten (Header/Footer)
 * Dynamische Pfadberechnung für Links im Header und Footer (ROOT-System)
 * Image/Logo durch svg ersetzt im Footer
+* Alert Message in Form
+* Tailwind an ausgesuchten Stellen eingesetzt
+ * ergänzend zu bestehendem Styling
+ * Funktionen ergänzend
 
 ---
 ## 💡 Erkenntnisse
