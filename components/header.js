@@ -27,8 +27,8 @@ class WebComponentHeader extends HTMLElement {
                         <img id="logoNavBar" src="${ROOT}images/landingPage/favicon.png" alt="favicon für Webseite"/>
                     </div>
 
-                    <button class="burger" id="burger" aria-label="Navigationsmenü öffnen" aria-expanded="false">
-                        <svg viewBox="0 0 640 640" width="32" height="32">
+                    <button class="burger" id="burger" aria-label="Navigationsmenü öffnen" aria-expanded="false" aria-controls="navbar">
+                        <svg aria-hidden="true" viewBox="0 0 640 640" width="32" height="32">
                             <path
                                 d="M112 448C103.2 448 96 455.2 96 464C96 508.2 131.8 544 176 544L464 544C508.2 544 544 508.2 544 464C544 455.2 536.8 448 528 448L112 448z
                                 M96 266C96 278.2 105.9 288 118 288L522 288C534.2 288 544 278.1 544 266C544 248.8 541.4 231.6 533.2 216.5C511 175.7 450.9 96 320 96C189.1 96 129 175.6 106.8 216.5C98.6 231.6 96 248.8 96 266z
@@ -45,7 +45,7 @@ class WebComponentHeader extends HTMLElement {
                         </svg>
                     </button>
                     
-                    <div class="navbar" id="navbar" aria-label="Hauptnavigation">
+                    <nav class="navbar" id="navbar" aria-label="Hauptnavigation">
                         <ul id="navSites">
                             <li><a href="${ROOT}index.html" >Home</a></li>
                             <li><a href="${ROOT}html/aboutMe.html" >Über mich</a></li>
@@ -53,7 +53,7 @@ class WebComponentHeader extends HTMLElement {
                             <li><a href="${ROOT}html/books.html" >Bücher</a></li>
                             <li><a href="${ROOT}html/work.html" >Arbeit</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </header>
             `
     }

@@ -40,7 +40,7 @@ Mein Konzept beinhaltet fünf Seiten:
 
 ---
 ## Responsive Design
-Nach überarbeitung des Konzepts in Phase zwei sind folgende Breakpoint umgesetzt:
+Nach Überarbeitung des Konzepts in Phase zwei sind folgende Breakpoint umgesetzt:
 
 Navigation:
 * 900px

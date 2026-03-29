@@ -43,6 +43,10 @@ section:nth-of-type(2) {
 .tableAboutMe th, td {
     padding: 0.7rem;
 }
+.tableAboutMe th {
+    color: var(--primary-color);
+    text-align: left;
+}
 
 
 /* 900px - 1599px */

@@ -1,8 +1,8 @@
 :root {
     --primary-color: #273556;
-    --accent-color: #ab906a;
+    --accent-color: #9a7c56;
     --background-color: #f8f9fa;
-    --heading-color: #3f4f75;
+    --heading-color: #4d688a;
     --text-color: #333333;
 }
 
@@ -49,4 +49,9 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
 }
