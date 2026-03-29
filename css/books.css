@@ -13,7 +13,7 @@ input[type="text"] {
     border-radius: 0.5rem;
     border: 1px solid #ccc;
 }
-input[type="submit"] {
+button[type="submit"]{
     padding: 0.6rem;
     border-radius: 0.5rem;
     border: none;
