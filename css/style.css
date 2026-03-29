@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #273556;
-    --accent-color: #9a7c56;
+    --primary-color: #0D1B2A;
+    --accent-color: #B08953;
+    --link-color: #624c2e;
     --background-color: #f8f9fa;
     --heading-color: #4d688a;
-    --text-color: #333333;
+    --text-color: #1B263B;
 }
 
 body {
@@ -38,7 +39,7 @@ p {
 
 /* Globale Elemente */
 a {
-    color: var(--accent-color);
+    color: var(--link-color);
 }
 
 a:hover {
