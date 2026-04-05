@@ -3,13 +3,17 @@ main {
     padding: 2rem;
 }
 p {
-    font-size: calc(12px + .5vw);
+    font-size: calc(10px + .5vw);
 }
 main h2 {
-    font-size: calc(15px + .5vw);
+    font-size: calc(12px + .5vw);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 main h3 {
-    font-size: calc(12px + .5vw);
+    font-size: calc(10px + .5vw);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 main p {
     font-size: calc(12px + .5vw);
@@ -31,9 +35,9 @@ main time {
 
 .resume {
     display: grid;
-    grid-template-columns: 0.4fr 1fr;
-    gap: 2rem 3rem;
+    grid-template-columns: minmax(80px, 0.4fr) 1fr;
     align-items: start;
+    gap: 1rem;
 }
 .resume > section > h2 {
     grid-column: 1;
