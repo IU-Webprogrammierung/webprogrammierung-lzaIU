@@ -1,11 +1,11 @@
 # Projekt: Web-Programmierung
 
 ## Projektbeschreibung
-Ziel des Projekts ist es, ein e Webseite zu entwickeln. 
+Ziel des Projekts ist es, eine Webseite zu entwickeln. 
 Dabei sollen verschiedene Komponenten und Funktionen implementiert werden.
 
 Die Anforderungen sind:
-* Inhalte auf beliebigen Geräten von 360 Pixel Breite bis 1920 Pixel Breite sinnvoll anzeigen
+* Inhalte auf beliebigen Geräten von 360-Pixel-Breite bis 1920-Pixel-Breite sinnvoll anzeigen
 * mindestens vier verlinkten Seiten
 * Versionskontrolle (Git)
 * Media Queries mit mindestens einem Breakpoint
@@ -29,6 +29,8 @@ Mein Konzept beinhaltet fünf Seiten:
 * JavaScript
   * Web Components für Header und Footer
 * Git
+* Tailwind CSS
+  * Tailwind Play CDNs zur Umsetzung ohne Build-Prozess.
 
 ---
 ## 📂 Projektstruktur
@@ -40,7 +42,7 @@ Mein Konzept beinhaltet fünf Seiten:
 
 ---
 ## Responsive Design
-Nach Überarbeitung des Konzepts in Phase zwei sind folgende Breakpoint umgesetzt:
+Nach Überarbeitung des Konzepts in Phase zwei sind folgende Breakpoints umgesetzt:
 
 Navigation:
 * 900px
@@ -97,21 +99,23 @@ Folgende Maßnahmen wurden umgesetzt:
 
 ---
 ## 🔧 Refactoring & Code-Optimierung
-Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt:
+Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt, um die Code-Qualität zu verbessern:
 
-* Wiederverwendbare Komponenten (Header/Footer)
+* Modulare Architektur: Implementierung von Web Components
 * Dynamische Pfadberechnung für Links im Header und Footer (ROOT-System)
 * Image/Logo durch svg ersetzt im Footer
-* Alert Message in Form
-* Tailwind an ausgesuchten Stellen eingesetzt
- * ergänzend zu bestehendem Styling
-* hinzufügen eines Favicon
+* Scroll Behavior zu smooth angepasst
+* Alert Message in Formelement
+* Einbindung eines Favicon
 * Back to Top Button
+* Tailwind CSS:
+  * an ausgesuchten Stellen eingesetzt – ergänzend zu bestehendem Styling
+  * Hybrid-CSS-Ansatz in Book-Page
 
 ### Refactoring Books ab Seitengrösse >1600px
 * Sticky Effekt
 * Card Optik
-* Style gemäss vorherigem CSS Styling übernommen
+* Überführung des vorhandenen CSS Stylings zu Tailwind
 
 ---
 ## 💡 Erkenntnisse
@@ -121,6 +125,7 @@ Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt:
 * Semantik ist entscheidend für Barrierefreiheit
 * CSS Grid und Flexbox ergänzen sich optimal
 * Konzepte müssen je nach Ausgangslage überarbeitet werden
+* Einsatz von Tailwind spannend aber umfassend
 
 ---
 ## 👩‍💻 Autorin
