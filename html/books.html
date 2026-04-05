@@ -3,9 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../tailwind.config.js"></script>
+
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/books.css">
+
         <script src="../components/header.js" defer></script>
         <script src="../components/footer.js" defer></script>
         <script src="../components/formBooks.js" defer></script>
@@ -17,54 +21,55 @@
             <web-component-header></web-component-header>
         </header>
 
-        <main>
-            <section>
-                <h1 class="text-4xl text-[var(--primary-color)] font-medium ">Bücher</h1>
+        <main class="desktop:grid desktop:grid-cols-3 desktop:gap-8 desktop:items-start">
+            <section class="desktop:col-start-1 desktop:flex desktop:flex-col desktop:gap-6 desktop:bg-accent/35
+                        desktop:rounded-2xl desktop:shadow-xl desktop:p-8 desktop:sticky desktop:top-8">
+                <h1 class="desktop:text-4xl desktop:text-primary desktop:font-medium desktop:mb-4">Bücher</h1>
                 <div class="textContainer">
                     <p>
                         Ich habe schon früh angefangen zu lesen. Seither ist es eines meiner grössten
                         Hobbys.
                     </p>
                     <p>
-                        Meine liebsten Genres sind Fantasy, Romanzen und Abendteuer.
+                        Meine liebsten Genres sind Fantasy, Romanzen und Abenteuer.
                     </p>
                 </div>
             </section>
 
-            <section>
-                <h2 id="booklistHeading">Meine Bücherliste</h2>
+            <section class="desktop:col-start-2 desktop:grid desktop:grid-cols-2 desktop:gap-6 desktop:bg-accent/35 desktop:rounded-2xl desktop:shadow-xl desktop:p-8">
+                <h2 id="booklistHeading" class="desktop:col-span-2 desktop:text-2xl desktop:font-semibold desktop:mb-4">Meine Bücherliste</h2>
 
                 <div class="bookGallery">
-                    <article class="book">
-                        <img src="../images/books/shadowFalls_1.jpg" alt="Cover des Buches Shadow Falls Camp - Geboren um Mitternacht von Amazon.de">
+                    <article class="book desktop:hover:-translate-y-2 desktop:transition-transform">
+                        <img src="../images/books/shadowFalls_1.jpg" alt="Cover Shadow Falls 1" class="desktop:w-full">
                         <p>Status: Gelesen</p>
                     </article>
                 </div>
                 <div class="bookGallery">
-                    <article class="book">
-                        <img src="../images/books/shadowFalls_2.jpg" alt="Cover des Buches Shadow Falls Camp - Erwacht im Morgengrauen von Amazon.de">
+                    <article class="book desktop:hover:-translate-y-2 desktop:transition-transform">
+                        <img src="../images/books/shadowFalls_2.jpg" alt="Cover Shadow Falls 2" class="desktop:w-full">
                         <p>Status: Gelesen</p>
                     </article>
                 </div>
                 <div class="bookGallery">
-                    <article class="book">
-                        <img src="../images/books/shadowFalls_3.jpg" alt="Cover des Buches Shadow Falls Camp - Entführt in der Dämmerung von Amazon.de">
+                    <article class="book desktop:hover:-translate-y-2 desktop:transition-transform">
+                        <img src="../images/books/shadowFalls_3.jpg" alt="Cover Shadow Falls 3" class="desktop:w-full">
                         <p>Status: reading</p>
                     </article>
                 </div>
                 <div class="bookGallery">
-                    <article class="book">
-                        <img src="../images/books/dragonGames_1.jpg" alt="Cover des Buches Dragon Games - Herz aus Feuer von Amazon.de">
+                    <article class="book desktop:hover:-translate-y-2 desktop:transition-transform">
+                        <img src="../images/books/dragonGames_1.jpg" alt="Cover Dragon Games" class="desktop:w-full">
                         <p>Status: TBR (To be read)</p>
                     </article>
                 </div>
             </section>
 
-            <section>
-                <h2>Was sind eure Lieblingsgenres?</h2>
+            <section class="desktop:col-start-3 desktop:bg-accent/35 desktop:rounded-2xl desktop:shadow-xl p-8 desktop:sticky desktop:top-8">
+                <h2 class="desktop:text-2xl desktop:font-semibold desktop:mb-6">Was sind eure Lieblingsgenres?</h2>
 
                 <div class="inputContainer">
-                    <form id="bookForm">
+                    <form id="bookForm" class="desktop:flex desktop:flex-col desktop:gap-4">
                         <label for="genre">Genre:</label>
                         <input type="text" id="genre" name="genre" required>
 
@@ -72,8 +77,9 @@
                         <input type="text" id="name" name="name">
 
                         <button type="submit" class="p-[0.6rem] rounded-[0.5rem] border-none cursor-pointer
-                                                    bg-[var(--accent-color)] text-[var(--primary-color)] text-[2.5vw]">
-                             Senden
+                                                    bg-accent text-primary text-[2.5vw]
+                                                    desktop:w-full desktop:text-lg desktop:hover:brightness-110 transition-all">
+                            Senden
                         </button>
                     </form>
                 </div>
