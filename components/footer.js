@@ -6,6 +6,22 @@ class WebComponentFooter extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.addBackToTop();
+    }
+
+    addBackToTop() {
+        const btn = this.shadowRoot.querySelector('.backToTop');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300) { // anzeige erst nach mind. 300px Scrollen
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        })
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        })
     }
 
     render() {
@@ -15,12 +31,19 @@ class WebComponentFooter extends HTMLElement {
             `
                 <link rel="stylesheet" href="${ROOT}css/style.css">
                 <link rel="stylesheet" href="${ROOT}css/footer.css">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 
                 <footer class="footerContainer">
+                    <button class="backToTop" aria-label="Nach oben scrollen">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" fill="currentColor">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </button>
+                
                     <div class="footerAuthor">
                         <p>Autor: Laura Zaugg</p>
                     </div>
+                   
                     <div class="footerSocialMedia">
                         <a class="socialMediaInsta" href="https://www.instagram.com/laura_zaugg_/" target="_blank" 
                         aria-label="Instagram Profil (öffnet in neuem Tab)">

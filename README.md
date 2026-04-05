@@ -106,6 +106,7 @@ Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt:
 * Tailwind an ausgesuchten Stellen eingesetzt
  * ergänzend zu bestehendem Styling
 * hinzufügen eines Favicon
+* Back to Top Button
 
 ### Refactoring Books ab Seitengrösse >1600px
 * Sticky Effekt
