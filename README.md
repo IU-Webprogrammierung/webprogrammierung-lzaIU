@@ -97,6 +97,11 @@ Folgende Maßnahmen wurden umgesetzt:
 * Einsatz von ARIA-Attributen
 * Gute Lesbarkeit durch passende Schriftgrößen und Kontraste
 
+### Testing
+Getestet wurde mit:
+* Lighthouse
+* Color Contrast Checker – https://coolors.co/contrast-checker/112a46-acc8e5
+
 ---
 ## 🔧 Refactoring & Code-Optimierung
 Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt, um die Code-Qualität zu verbessern:
