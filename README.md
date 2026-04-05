@@ -105,6 +105,7 @@ Im Verlauf des Projekts wurden folgende Verbesserungen umgesetzt:
 * Alert Message in Form
 * Tailwind an ausgesuchten Stellen eingesetzt
  * ergänzend zu bestehendem Styling
+* hinzufügen eines Favicon
 
 ### Refactoring Books ab Seitengrösse >1600px
 * Sticky Effekt
